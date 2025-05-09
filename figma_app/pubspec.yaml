@@ -38,6 +38,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_svg: ^2.0.9  ## gunakan versi terbaru
+  google_fonts: ^6.1.0 ## gunakan versi terbaru
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -87,3 +89,6 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+  assets:
+    - assets/icons/
+    - assets/images/furniture/

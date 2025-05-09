@@ -1,20 +1,27 @@
 import 'package:flutter/material.dart';
-import 'pages/get_started_page.dart';
+import '../../features/home/pages/home_page.dart';
+import '../../features/detail/pages/detail_page.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'NFT Collection',
-      theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Roboto'),
-      home: const GetStartedPage(),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: HomePage(),
+      //home: DetailPage(),
+      routes: {
+        '/detail': (context) => const DetailPage(),
+      },
     );
   }
 }
